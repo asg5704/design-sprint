@@ -7,6 +7,7 @@
   <meta name="author" content="Alexander Garcia">
   <meta name="description" content="Five-day Design Sprint Challenge - Anne Arundel Community College">
   <title>The Design Sprint Challenge - Maryland Foodbank - Anne Arundel Community College</title>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway:300" rel="stylesheet">
   <style>
   html {
     height: 100%;
@@ -14,8 +15,8 @@
   }
   body {
     font-size: 16px;
-    background-color: #f1f1ef;
-    color: #222;
+    background-color: #f1f1ee;
+    color: #444;
     min-height: 100%;
     width: 100%;
     margin: 0;
@@ -28,131 +29,262 @@
     line-height: 1.73;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
+    text-align: left;
+    letter-spacing: -.09rem;
   }
   h1 {
-    font-family: 'Playfair Display', Arial, sans-serif;
+    font-family: 'Playfair Display', serif;
     color: #4a4358;
-    font-size: 10rem;
+    font-size: 8rem;
     padding: 0;
     margin: 0;
+    font-weight: 400;
+    letter-spacing:-0.60rem
   }
   h2 {
-    font-family: 'Playfair Display', Arial, serif;
-    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.7rem;
+    margin: -22px auto;
+    font-weight: 400;
   }
+
   footer {
-    background-color: #B8c8cc;
-    position: absolute;
+    background-color: #9d9aa3;
+    position: relative;
     left: auto;
     right: auto;
     width: 100%;
     min-height: 125px;
     text-align: center;
+    box-shadow: 0px 0 55px rgba(0,0,0,0.2);
   }
   footer a, footer p {
-    color: #333;
+    color: #4a4358;
     font-weight: bold;
-    line-height: 1.12;
+    line-height: 125px;
     text-decoration: none;
+    text-align: center;
   }
   header {
     box-sizing: border-box;
     background-color: #B8c8cc;
     width: 100%;
-    height: 189px;
+    height: 213px;
     padding: 1rem;
-    box-shadow: 0px 30px 0px rgba(74, 67, 88, 0.5);
+    border-bottom: 24px solid #9d9aa3;
   }
   header h1 {
     text-align: center;
+    margin-top: 35px;
   }
   main {
     height: 100%;
-    width: 85%;
+    width: 100%;
     min-height: 800px;
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
-  .section {
-    width: 42.5%;
-    margin-top: 75px;
+  #container {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .row {
+    width: 100%;
+    margin-top: 165px;
     align-self: auto;
-    padding: 15px;
+    display: flex;
+    justify-content: space-between;
   }
-
+  section {
+    width: 44%;
+  }
   .section-image {
-    width: 75%;
+    width: 100%;
     height: auto;
     display: block;
-    margin: 48px auto;
     box-shadow: 0 3.2px 3.2px rgba(0,0,0,0.2);
     background-color:#4a4358;
+    margin-top: 30px;
   }
 
-  </style>
+  .step-span {
+    text-transform: uppercase;
+    color: #638086;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  .step-span:nth-of-type(2) {
+    color: #4a4358;
+  }
+
+  section.steps-left, section.steps-right {
+    background-color: rgb(181,200,204);
+    padding: 2.3rem;
+    transform: skew(0deg, 22deg);
+    height: 650px;
+  }
+  section.steps-right {
+    transform: skew(0deg, -22deg);
+  }
+
+  .rotate-image-left {
+    transform: skew(0deg, -22deg);
+    margin-top: -15px;
+    z-index: -5;
+  }
+
+  .steps-right__header--first, .steps-right__content--first {
+    transform: skew(0deg, 22deg);
+    position: relative;
+    top: 135px;
+  }
+  .steps-right__header, .steps-right__content {
+    transform: skew(0deg, 22deg);
+  }
+  .span-right {
+    transform: skew(0deg, 22deg);
+    margin-top: 125px;
+  }
+
+  .img-step1{
+    position: relative;
+    left: -73px;
+    width: 783px;
+    box-shadow: -360px 190px 0 545px #fff;
+    z-index: -6;
+  }
+  .img-step2, img.section-image.first-img {
+    position: relative;
+    top: 125px;
+  }
+  section.steps-left--purple {
+    background-color: #9d9aa3;
+  }
+  .section-image.first-img {
+    box-shadow: 420px 170px 0px 100px #9d9aa3;
+    z-index: -5;
+  }
+  .img-step2 {
+    box-shadow: 235px 115px 0 50px #9d9aa3;
+    z-index: -5;
+  }
+  .row.four {
+    position: relative;
+    top: 22px;
+  }
+  .img-step3 {
+    position: relative;
+    width: 783px;
+    left: -73px;
+    box-shadow: -40px 120px 0 30px #fff;
+    z-index: -5;
+  }
+  .img-step5 {
+    box-shadow: -696px -75px 0 330px #B8c8cc;
+    z-index: -15;
+  }
+  .visible {
+    z-index: 5;
+  }
+  h2.nodisplay {
+    opacity: 0;
+    display: none;
+  }
+</style>
 </head>
 <body>
   <header>
-    <h1>The Design Sprint</h1>
+    <h1>Maryland Food Bank Design Sprint</h1>
   </header>
-  <main id='container'>
-    <div class='section'>
-      <img src='assets/collab_01.jpg' class='section-image' alt='Design Sprint Image by GV' />
+  <div id='container'>
+  <main>
+    <div class='row first'>
+      <section>
+        <h2 class='nodisplay'>Chalkboard Image</h2>
+        <img src='assets/collab_01.jpg' class='section-image first-img' alt='A completed design sprint brainstorming session' />
+      </section>
+      <section class='steps-right'>
+        <h2 class='steps-right__header--first'>What is our Goal?</h2>
+        <p class='steps-right__content--first'>Answering Maryland Food Bank's critical problems trying to help the Food Bank generate more online donations through design, prototyping and validating feedback with it's users. Our team &mdash; Anna, Ashton, and myself &mdash; over the course of five days determined the best course of action was a design sprint! </p>
+      </section>
     </div>
-    <div class='section'>
-      <h2>What is a design sprint?</h2>
-      <p>The sprint is a five-day process for answering critical business questions through design, prototyping and testing ideas with customers.</p>
-      <p>--Google Ventures</p>
+    <div class='row'>
+      <section>
+        <p class='step-span'><span>Step One</span></p>
+        <h2>Understand the Problem</h2>
+        <p>The single most important thing to do: Understanding the problem. Step 1 of the Design Sprint, we hyper-focused on a very specific problem.  Maryland Foodbank wanted a way to generate more online donations.</p>
+        <p>Our teams goals was to decid on ways to alleviate the stresses with online donations while maximizing a user-friendly UI.</p>
+      </section>
+      <section>
+        <h2 class='nodisplay'>Image of Step 1</h2>
+        <img src='assets/collab_02.jpg' class='section-image img-step1' alt='Group of students discussing the problem on whiteboard.' />
+      </section>
     </div>
-    <div class='section'>
-      <h2>Step 1 - Understand the Problem</h2>
-      <p>The single most important thing to do, understand the problem. Step 1 of the Design Sprint, we hyper-focused on a very specific problem.  Maryland Foodbank wanted a way to generate more online donations.</p>
-      <p>The team decided on the ways to alleviate the stresses with online donations while maximizing a user-friendly UI.</p>
+    <div class='row third'>
+      <section>
+        <h2 class='nodisplay'>Image of Step 2</h2>
+        <img src='assets/collab_04.jpg' class='section-image img-step2' alt='Team of 3 students vote on Crazy 8s sketches' />
+      </section>
+      <section class='steps-right'>
+        <p class='step-span span-right'><span>Step Two</span></p>
+        <h2 class='steps-right__header'>Diverge or Sketching</h2>
+        <p class='steps-right__content'>In Step 2 of the sprint, our team collaborated on different ideas known as 'Crazy 8s'.  Our team began creating 8 different sketches to brainstorm.  Eventually voting on the best features and ideas within our teams.</p>
+        <p class='steps-right__content'>Each team member bringing their unique elements into the design sketching phase.</p>
+      </section>
     </div>
-    <div class='section'>
-      <img src='assets/collab_02.jpg' class='section-image' alt='Group of students discussing the problem on whiteboard.' />
+    <div class='row four'>
+      <section>
+        <p class='step-span'><span>Step Three</span></p>
+        <h2>Decide &amp; Determine</h2>
+        <p>Step 3 involves improving ideas within our team of 3.  We refine our 'Crazy 8s' sketches down to the 'Design Trinity' fabricating and refining our new product within 3 sketches.</p>
+        <p>In the end, the team decided on an uncomplicated user interface (UI) for users to navigate the donations and volunteer pages for the Maryland Food Bank.</p>
+      </section>
+      <section>
+        <h2 class='nodisplay'>Image of Step 3</h2>
+        <img src='assets/collab_03.jpg' class='section-image img-step3' alt='Three students vote on the Design Trinity sketches' />
+      </section>
     </div>
-    <div class='section'>
-      <img src='assets/collab_03.jpg' class='section-image'
-      alt='Team of 3 students vote on Crazy 8s sketches' />
+    <div class='row'>
+      <section class='steps-left steps-left--purple'>
+        <h2 class='nodisplay'>Image of Step 4</h2>
+        <img src='assets/collab_05.jpg' class='section-image rotate-image-left' alt='Students create a prototype on their phone' />
+      </section>
+      <section>
+        <p class='step-span'><span>Step Four</span></p>
+        <h2>Prototyping</h2>
+        <p >The next step in the design sprint is the prototyping process.  Demanding that the team develop a rough draft of the site or web app using an called Marvel.  Which allows to create functionality by taking pictures of your mockups.</p>
+        <p >I contributed two design elements to our intuitive user-interface that was effortless to navigate and straight-forward in understanding for our users.</p>
+      </section>
     </div>
-    <div class='section'>
-      <h2>Step 2 - Diverge or Sketching</h2>
-      <p>In Step 2 of the sprint, our team collaborated on different ideas in term known as 'Crazy 8s'.  Which is basically creating 8 different sketches for brainstorming.  Eventually voting on the best features and ideas within our teams.</p>
-      <p>Each team member bringing their unique elements into the design sketching phase.</p>
-    </div>
-    <div class='section'>
-      <h2>Step 3 - Decide and Determine</h2>
-      <p>Step 3 involves improving ideas within our teams of 3-4 people.  We refine our 'Crazy 8s' sketches down to the 'Design Trinity' and design a new feature in 3 sketches.</p>
-      <p>In the end our team decided on an easy to navigate page for the Maryland FoodBank donations page.</p>
-    </div>
-    <div class='section'>
-      <img src='assets/collab_04.jpg' class='section-image'
-      alt='Three students vote on the Design Trinity sketches' />
-    </div>
-    <div class='section'>
-      <img src='assets/collab_05.jpg' class='section-image'
-      alt='Students create a prototype on their phone' />
-    </div>
-    <div class='section'>
-      <h2>Step 4 - Prototyping</h2>
-      <p>The next step in the design sprint is the prototyping process.  This demands that the team develop a rough draft of the site or web app.</p>
-      <p>Designing an intuitive user-interface that was easy to navigate and straight-forward in understanding for our users.</p>
-    </div>
-    <div class='section'>
-      <h2>Step 5 - Validate &amp; Measure</h2>
-      <p>Step 5 requires that the rough draft of our prototype is validated through user testing.  Also included is measuring and refining the prototype, iterating until the prototype is a working product.</p>
-      <p>During our user feedback we noticed core problems in the users control and wanting to navigate backwards between pages.</p>
-    </div>
-    <div class='section'>
-      <img src='assets/collab_06.jpg' class='section-image' alt='Two students peform user validation to and keep iterating until a polished product is revealed' />
+    <div class='row'>
+      <section class='visible'>
+        <p class='step-span'><span>Step Five</span></p>
+        <h2>Validate &amp; Measure</h2>
+        <p>Step 5 requires that the rough draft of our prototype is validated through user testing.  Also included is measuring and refining the prototype, iterating until the prototype is a working product.</p>
+        <p>I contributed by creating a script for the interviewer to use as a basis for our validation process.  Also serving as a note taker during the UX process.</p>
+        <p>During our user feedback we noticed core problems with our site.  The users wanting more control with the mobility throughout the site coupled with the necessity of more information concerning the payment process.</p>
+      </section>
+      <section>
+        <h2 class='nodisplay'>Image of Step 5</h2>
+        <img src='assets/collab_06.jpg' class='section-image img-step5' alt='Two students peform user validation to and keep iterating until a polished product is revealed' />
+      </section>
     </div>
   </main>
+  </div>
   <footer>
     <p>Built by <a href='#'>Alexander Garcia</a></p>
   </footer>
 </body>
 </html>
+<!--
+=== Critiques ===
+Take out triangles, HTML must be valid!
+Use ampersand
+H1 letter spacing
+h2 & p close proximity
+span steps make unique
+-->
